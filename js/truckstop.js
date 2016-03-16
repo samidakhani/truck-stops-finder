@@ -14,30 +14,39 @@ function isInArray(array,value){
     return array.indexOf(value) > -1;
 }
 
+function createMarkers(results){
+    for (var i = 0; i < results.length; i++) {
+        var place = results[i];
+        var placeTypes = place.types;
+
+        if (isInArray(placeTypes, 'gas_station') && isInArray(placeTypes, 'food')) {
+
+            var marker = new google.maps.Marker({
+                map: map,
+                position: place.geometry.location
+            });
+
+            markers.push(marker);
+
+        }
+
+    }
+}
+
 /**
  * Create makers for truck stops that provide facilities:fuel and food
  * @param results
  * @param status
  */
-function createTruckStopMarkers(results, status){
+function createTruckStopMarkers(results, status,pagination){
 
     if (status == google.maps.places.PlacesServiceStatus.OK) {
-        for (var i = 0; i < results.length; i++) {
-            var place = results[i];
-            var placeTypes = place.types;
+        createMarkers(results);
 
-            if (isInArray(placeTypes, 'gas_station') && isInArray(placeTypes, 'food')) {
-
-                var marker = new google.maps.Marker({
-                    map: map,
-                    position: place.geometry.location
-                });
-
-                markers.push(marker);
-
-            }
-
+        if (pagination.hasNextPage) {
+            pagination.nextPage();
         }
+
     }
 }
 
