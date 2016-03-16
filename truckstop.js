@@ -1,7 +1,8 @@
 var map;
 var markers = [];
-var controlUI;
-var controlDiv;
+var latField;
+var longField;
+var addrField;
 
 /**
  * Checks if the array contains a value
@@ -48,6 +49,9 @@ function deleteTruckStopMarkers(){
         markers[i].setMap(null);
     }
     markers = [];
+    latField.value = '';
+    longField.value = '';
+    addrField.value = '';
 }
 
 /**
@@ -92,25 +96,32 @@ function createClearControl(controlDiv, map) {
 
 /**
  * Loads the truck stop markers nearby provided location
+ * @param lat
+ * @param lang
  */
-function initMap() {
+function initMap(lat,lang) {
 
-    var myhouse = new google.maps.LatLng(34.83102, -116.70868);
+    if(markers.length != 0){
+        deleteTruckStopMarkers();
+    }
+
+    var location = new google.maps.LatLng(lat,lang);
 
     map = new google.maps.Map(document.getElementById('map'), {
-        center: myhouse,
+        center: location,
         zoom: 10
     });
 
     //My location marker
-    new google.maps.Marker({
+    var marker=new google.maps.Marker({
         map: map,
-        position: myhouse,
+        position: location,
         icon : 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
     });
+    markers.push(marker);
 
     var request = {
-        location : myhouse,
+        location : location,
         keyword : 'Truck Stop',
         openNow : true,
         rankBy : google.maps.places.RankBy.DISTANCE
@@ -131,9 +142,49 @@ function initMap() {
 }
 
 /**
- * Show the ClearTruckStop button
+ * Invoked LoadMap button on buttonClick
  */
-function showClearButton(){
-    initMap();
-    controlDiv.appendChild(controlUI);
+function loadTruckStops(){
+
+    latField = document.getElementById("latitude");
+    longField = document.getElementById("longitude");
+    addrField =  document.getElementById("address");
+
+    if(latField.value !='' && longField.value != ''){
+        initMap(latField.value,longField.value);
+    }else if(addrField.value !=''){
+        loadTruckStopsFromAddress(addrField.value);
+    }else{
+        alert("Please enter Lat/Long OR Address");
+    }
+
+   // initMap(34.83102, -116.70868);
 }
+
+/**
+ * Calls the initMap method after converting address to lat and longitude
+ * @param address
+ */
+function loadTruckStopsFromAddress(address){
+
+    var latitude;
+    var longitude;
+    var geocoder = new google.maps.Geocoder();
+    var latlang = new google.maps.LatLng();
+
+
+    geocoder.geocode( { 'address': address}, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+            latlang = results[0].geometry.location;
+            latField.value = latlang.lat();
+            longField.value = latlang.lng();
+            initMap(latlang.lat(),latlang.lng());
+
+        } else {
+            alert("Geocode was not successful for the following reason: " + status);
+        }
+    });
+
+}
+
+

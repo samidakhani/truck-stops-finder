@@ -11,21 +11,51 @@
             padding: 0;
         }
         #map {
-            height: 90%;
+            height: 95%;
             width:100%
+        }
+        #loadMap{
+            width:100px;
+            height:20px;
+            margin-left: 50px;
+            background: black;
+            color: white
+        }
+        #address{
+            width: 300px;
+        }
+
+        label{
+            margin-left: 50px;
+            font-family: "Arial";
+            font-size: 14px;
+            font-weight: 600;
+        }
+        span {
+            margin-left: 50px;
+            font-family: "Arial Black";
+            font-size: 14px;
+            font-weight: 600;
         }
     </style>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_795k5s-Y-oPGnPyDgHAQzPACmrzq3O0&callback=initMap&libraries=places"
+<!--    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_795k5s-Y-oPGnPyDgHAQzPACmrzq3O0&callback=initMap&libraries=places"
+             async defer></script>-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_795k5s-Y-oPGnPyDgHAQzPACmrzq3O0&libraries=places"
             async defer></script>
     <script type="text/javascript" src="truckstop.js"></script>
 
 </head>
 <body>
-<div id="map"></div>
 <div>
     <br />
-    <input style="width:100px;height:200px" type="button" value="ClickMe" onclick="showClearButton()" />
+    <label> Latitude <input id="latitude" type="number" autocomplete="on" /> </label>
+    <label> Longitude <input id="longitude" type="number" autocomplete="on" /> </label>
+    <span id="midText">OR</span>
+    <label> Address <input id="address" type="text" autocomplete="on" /> </label>
+    <input id="loadMap" type="button" value="LoadMap" onclick="loadTruckStops()" />
+    <br /><br />
 </div>
+<div id="map"></div>
 </body>
 </html>
