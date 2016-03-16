@@ -246,9 +246,9 @@ function initMap(lat,lang) {
  */
 function loadTruckStops(){
 
-    latField = document.getElementById("latitude");
-    longField = document.getElementById("longitude");
-    addrField =  document.getElementById("address");
+    latField = document.getElementById("latitudeTxt");
+    longField = document.getElementById("longitudeTxt");
+    addrField =  document.getElementById("addressTxt");
 
     if(latField.value !='' && longField.value != ''){
         loadTruckStopsFromLatLang(latField.value,longField.value);
