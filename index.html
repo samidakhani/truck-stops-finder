@@ -4,34 +4,34 @@
     <title>Truck Stops</title>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
-    <style>
+   <style>
         html, body {
             height: 100%;
             margin: 0;
             padding: 0;
         }
-        #map {
-            height: 95%;
+       #map {
+            height: 92%;
             width:100%
         }
         #loadMap{
-            width:100px;
-            height:20px;
-            margin-left: 50px;
-            background: black;
-            color: white
-        }
+             width:100px;
+             height:20px;
+             margin-left: 50px;
+             background: black;
+             color: white
+         }
         #address{
-            width: 300px;
+             width: 300px;
         }
 
-        label{
-            margin-left: 50px;
-            font-family: "Arial";
-            font-size: 14px;
-            font-weight: 600;
-        }
-        span {
+         label{
+             margin-left: 50px;
+             font-family: "Arial";
+             font-size: 14px;
+             font-weight: 600;
+         }
+        #midText {
             margin-left: 50px;
             font-family: "Arial Black";
             font-size: 14px;
@@ -43,16 +43,17 @@
              async defer></script>-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_795k5s-Y-oPGnPyDgHAQzPACmrzq3O0&libraries=places"
             async defer></script>
-    <script type="text/javascript" src="truckstop.js"></script>
+    <script type="text/javascript" src="js/autocomplete.js"></script>
+    <script type="text/javascript" src="js/truckstop.js"></script>
 
 </head>
-<body>
+<body onload="pageLoad()">
 <div>
     <br />
-    <label> Latitude <input id="latitude" type="number" autocomplete="on" /> </label>
-    <label> Longitude <input id="longitude" type="number" autocomplete="on" /> </label>
+    <label> <input id="latitude" type="number" placeholder="Latitude"  /> </label>
+    <label> <input id="longitude" type="number" placeholder="Longitude"  /> </label>
     <span id="midText">OR</span>
-    <label> Address <input id="address" type="text" autocomplete="on" /> </label>
+    <label> <input id="address" type="text" placeholder="Search an address" onmouseover="initAutocomplete()"/> </label>
     <input id="loadMap" type="button" value="LoadMap" onclick="loadTruckStops()" />
     <br /><br />
 </div>

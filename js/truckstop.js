@@ -59,7 +59,7 @@ function deleteTruckStopMarkers(){
  * @param controlDiv
  * @param map
  */
-function createClearControl(controlDiv, map) {
+function createClearControl(controlDiv) {
 
     // Set CSS for the control border.
     controlUI = document.createElement('div');
@@ -123,8 +123,9 @@ function initMap(lat,lang) {
     var request = {
         location : location,
         keyword : 'Truck Stop',
+        radius : '160934',
         openNow : true,
-        rankBy : google.maps.places.RankBy.DISTANCE
+        rankBy : google.maps.places.RankBy.PROMINENCE
     };
 
     var service = new google.maps.places.PlacesService(map);
@@ -132,7 +133,7 @@ function initMap(lat,lang) {
 
     //Map Control -- Start
     controlDiv = document.createElement('div');
-    var centerControl = new createClearControl(controlDiv, map);
+    var centerControl = new createClearControl(controlDiv);
 
     controlDiv.index = 1;
     map.controls[google.maps.ControlPosition.TOP_RIGHT].push(controlDiv);
@@ -151,18 +152,17 @@ function loadTruckStops(){
     addrField =  document.getElementById("address");
 
     if(latField.value !='' && longField.value != ''){
-        initMap(latField.value,longField.value);
+        loadTruckStopsFromLatLang(latField.value,longField.value);
     }else if(addrField.value !=''){
         loadTruckStopsFromAddress(addrField.value);
     }else{
         alert("Please enter Lat/Long OR Address");
     }
 
-   // initMap(34.83102, -116.70868);
 }
 
 /**
- * Calls the initMap method after converting address to lat and longitude
+ * Calls the initMap method after converting address to latitude and longitude
  * @param address
  */
 function loadTruckStopsFromAddress(address){
@@ -170,21 +170,59 @@ function loadTruckStopsFromAddress(address){
     var latitude;
     var longitude;
     var geocoder = new google.maps.Geocoder();
-    var latlang = new google.maps.LatLng();
+    var latlng = new google.maps.LatLng();
 
 
     geocoder.geocode( { 'address': address}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
-            latlang = results[0].geometry.location;
-            latField.value = latlang.lat();
-            longField.value = latlang.lng();
-            initMap(latlang.lat(),latlang.lng());
+            latlng = results[0].geometry.location;
 
-        } else {
-            alert("Geocode was not successful for the following reason: " + status);
+            latField.value = latlng.lat();
+            longField.value = latlng.lng();
+
+            initMap(latlng.lat(),latlng.lng());
+
+        }else {
+            window.alert('Geocoder failed due to: ' + status);
         }
     });
 
 }
 
+/**
+ * Calls the initMap method using the lat and
+ * @param lat
+ * @param lng
+ */
+function loadTruckStopsFromLatLang(lat,lng){
+
+    var address;
+    var geocoder = new google.maps.Geocoder();
+    var latlng = {lat: parseFloat(lat), lng: parseFloat(lng)};
+
+    geocoder.geocode({'location': latlng}, function(results, status) {
+        if (status === google.maps.GeocoderStatus.OK) {
+            address = results[0].formatted_address;
+
+            addrField.value = address;
+
+            initMap(lat,lng);
+        }else {
+            window.alert('Geocoder failed due to: ' + status);
+        }
+    });
+
+
+}
+
+
+function pageLoad(){
+
+    var location = new google.maps.LatLng(37.090240,-95.712891);
+
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: location,
+        zoom: 4
+    });
+}
 
