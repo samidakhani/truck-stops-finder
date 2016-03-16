@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Truck Stops</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            height: 90%;
+            width:100%
+        }
+    </style>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_795k5s-Y-oPGnPyDgHAQzPACmrzq3O0&callback=initMap&libraries=places"
+            async defer></script>
+    <script type="text/javascript" src="truckstop.js"></script>
+
+</head>
+<body>
+<div id="map"></div>
+<div>
+    <br />
+    <input style="width:100px;height:200px" type="button" value="ClickMe" onclick="showClearButton()" />
+</div>
+</body>
+</html>
