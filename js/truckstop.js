@@ -14,7 +14,12 @@ function isInArray(array,value){
     return array.indexOf(value) > -1;
 }
 
+/**
+ * Create makers
+ * @param results
+ */
 function createMarkers(results){
+
     for (var i = 0; i < results.length; i++) {
         var place = results[i];
         var placeTypes = place.types;
@@ -39,6 +44,7 @@ function createMarkers(results){
  * @param status
  */
 function createTruckStopMarkers(results, status,pagination){
+
 
     if (status == google.maps.places.PlacesServiceStatus.OK) {
         createMarkers(results);
@@ -103,6 +109,86 @@ function createClearControl(controlDiv) {
 
 }
 
+function getCurrentLocation(){
+
+    var initialLocation;
+    if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: initialLocation,
+                zoom: 10
+            });
+
+            //My location marker
+            var marker=new google.maps.Marker({
+                map: map,
+                position: initialLocation,
+                icon : 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+            });
+            markers.push(marker);
+
+            var request = {
+                location : initialLocation,
+                keyword : 'Truck Stop',
+                radius : '160934',
+                openNow : true,
+                rankBy : google.maps.places.RankBy.PROMINENCE
+            };
+
+            var service = new google.maps.places.PlacesService(map);
+            service.nearbySearch(request,createTruckStopMarkers);
+
+            //Map Control -- Start
+            controlDiv = document.createElement('div');
+            controlDiv1 = document.createElement('div');
+
+            var centerControl = new createClearControl(controlDiv);
+            controlDiv.index = 1;
+            map.controls[google.maps.ControlPosition.TOP_RIGHT].push(controlDiv);
+
+            var centerControl = new createCurrentLocationControl(controlDiv1);
+            controlDiv1.index = 1;
+            map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(controlDiv1);
+
+            //Map Control -- Stop
+
+        }, function() {});
+
+
+    }else{
+        alert("Cannot detect current location");
+    }
+
+}
+
+
+function createCurrentLocationControl(controlDiv){
+
+    // Set CSS for the control border.
+    controlUI = document.createElement('div');
+    controlUI.style.backgroundColor = '#fff';
+    controlUI.style.borderRadius = '3px';
+    controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
+    controlUI.style.cursor = 'pointer';
+    controlUI.style.marginRight = '12px';
+    controlDiv.appendChild(controlUI);
+
+    // Set CSS for the control interior.
+    var controlImage = document.createElement('img');
+    controlImage.src ="images/current_location.png";
+    controlImage.style.width = '20px';
+    controlImage.style.height = '20px';
+    controlImage.style.padding ="3px";
+    controlUI.appendChild(controlImage);
+
+    // Setup the click event listeners: simply set the map to Chicago.
+    controlUI.addEventListener('click', function() {
+        getCurrentLocation();
+    });
+}
+
 /**
  * Loads the truck stop markers nearby provided location
  * @param lat
@@ -143,9 +229,13 @@ function initMap(lat,lang) {
     //Map Control -- Start
     controlDiv = document.createElement('div');
     var centerControl = new createClearControl(controlDiv);
-
     controlDiv.index = 1;
     map.controls[google.maps.ControlPosition.TOP_RIGHT].push(controlDiv);
+
+    controlDiv1 = document.createElement('div');
+    var centerControl = new createCurrentLocationControl(controlDiv1);
+    controlDiv1.index = 1;
+    map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(controlDiv1);
 
     //Map Control -- Stop
 
@@ -224,7 +314,9 @@ function loadTruckStopsFromLatLang(lat,lng){
 
 }
 
-
+/**
+ * Invoked on pageLoad
+ */
 function pageLoad(){
 
     var location = new google.maps.LatLng(37.090240,-95.712891);
@@ -233,5 +325,15 @@ function pageLoad(){
         center: location,
         zoom: 4
     });
+
+
+    //Map Control -- Start
+    controlDiv = document.createElement('div');
+    var centerControl = new createCurrentLocationControl(controlDiv);
+
+    controlDiv.index = 2;
+    map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(controlDiv);
+
+    //Map Control -- Stop
 }
 
