@@ -1,6 +1,6 @@
 function initAutocomplete() {
 
-    var input = document.getElementById('addressTxt');
+    var input = document.getElementById('addrTxt');
     var options = {
         types: ['geocode'],
         componentRestrictions: {country: 'us'}

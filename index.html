@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
   <head>
-    <title>Truck Stops</title>
-    <meta name="viewport" content="initial-scale=1.0">
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/truckstops.css" />
+      <title>Truck Stops</title>
+      <meta name="viewport" content="initial-scale=1.0">
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="css/truckstops.css" />
+
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_795k5s-Y-oPGnPyDgHAQzPACmrzq3O0&libraries=places"
+              async defer></script>
+      <script type="text/javascript" src="js/autocomplete.js"></script>
+      <script type="text/javascript" src="js/truckstops.js"></script>
+      <script type="text/javascript" src="js/mapcontrols.js"></script>
+      <script type="text/javascript" src="js/handlers.js"></script>
+      <script type="text/javascript" src="js/mapmarkers.js"></script>
+      <script type="text/javascript" src="js/geocoder.js"></script>
+
+
   </head>
-  <body onload="pageLoad()">
+  <body onload="initMap()">
 
     <div>
 
         <br />
-        <label> <input id="latitudeTxt" type="number" placeholder="Latitude" /> </label>
-        <label> <input id="longitudeTxt" type="number" placeholder="Longitude" /> </label>
+        <label> <input id="latTxt" type="number" placeholder="Latitude" /> </label>
+        <label> <input id="lngTxt" type="number" placeholder="Longitude" /> </label>
 
         <span id="midTxt">OR</span>
 
-        <label> <input id="addressTxt" type="text" placeholder="Search an address" onmouseover="initAutocomplete()"/> </label>
+        <label> <input id="addrTxt" type="text" placeholder="Search an address" onmouseover="initAutocomplete()"/> </label>
 
-        <input id="loadmapBtn" type="button" value="LoadMap" onclick="loadTruckStops()" />
+        <input id="loadmapBtn" type="button" value="LoadMap" onclick="loadMapBtnClick()" />
         <br /><br />
 
     </div>
 
     <div id="map"></div>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_795k5s-Y-oPGnPyDgHAQzPACmrzq3O0&libraries=places"
-            async defer></script>
-    <script type="text/javascript" src="js/truckstop.js"></script>
-    <script type="text/javascript" src="js/autocomplete.js"></script>
-
   </body>
 
 </html>

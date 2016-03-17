@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14ca739d-5b7b-4dd7-974f-6fc9785153e9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/truckstops.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/truckstops.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/truckstop.js" afterPath="$PROJECT_DIR$/js/truckstop1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/clear_button.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/geocoder.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/handlers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/mapcontrols.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/mapmarkers.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/truckstop1.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/truckstops.css" afterPath="$PROJECT_DIR$/css/truckstops.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/autocomplete.js" afterPath="$PROJECT_DIR$/js/autocomplete.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/truckstops.js" afterPath="$PROJECT_DIR$/js/truckstops.js" />
     </list>
     <ignored path="truck-stops-finder.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,12 +34,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="mapmarkers.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/mapmarkers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57539684">
-              <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+              <folding>
+                <element signature="n#!!block;n#isInArray#0" expanded="false" />
+                <element signature="n#!!block;n#createMarkers#0" expanded="false" />
+                <element signature="n#!!block;n#paginateMarkers#0" expanded="false" />
+                <element signature="n#!!block;n#loadCurrentLocationMarker#0" expanded="false" />
+                <element signature="n#!!block;n#loadTruckStopMarkers#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -43,59 +54,54 @@
         <entry file="file://$PROJECT_DIR$/js/truckstops.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="3" />
+              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="truckstops.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/truckstops.css">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.625">
-              <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+            <state vertical-scroll-proportion="-19.375">
+              <caret line="31" column="86" selection-start-line="31" selection-start-column="86" selection-end-line="31" selection-end-column="86" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="truckstop1.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/truckstop1.js">
+      <file leaf-file-name="handlers.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/handlers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="230" column="42" selection-start-line="230" selection-start-column="42" selection-end-line="230" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.32692307">
+              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding>
-                <element signature="n#!!doc;n#isInArray#0" expanded="false" />
-                <element signature="n#!!block;n#isInArray#0" expanded="false" />
-                <element signature="n#!!doc;n#createMarkers#0" expanded="false" />
-                <element signature="n#!!doc;n#createTruckStopMarkers#0" expanded="false" />
-                <element signature="n#!!doc;n#deleteTruckStopMarkers#0" expanded="false" />
-                <element signature="n#!!block;n#deleteTruckStopMarkers#0" expanded="false" />
-                <element signature="n#!!doc;n#createClearControl#0" expanded="false" />
-                <element signature="n#!!doc;n#initMap#0" expanded="false" />
-                <element signature="n#!!doc;n#loadTruckStops#0" expanded="false" />
-                <element signature="n#!!doc;n#loadTruckStopsFromAddress#0" expanded="false" />
-                <element signature="n#!!doc;n#loadTruckStopsFromLatLang#0" expanded="false" />
-                <element signature="n#!!doc;n#pageLoad#0" expanded="false" />
-                <element signature="n#!!block;n#pageLoad#0" expanded="false" />
+                <element signature="n#!!block;n#loadMap#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="current_location.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/current_location.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="mapcontrols.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/mapcontrols.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="56" column="32" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
+              <folding>
+                <element signature="n#!!block;n#createMapControls#0" expanded="false" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="autocomplete.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/autocomplete.js">
+      <file leaf-file-name="geocoder.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/geocoder.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
-              <folding />
+              <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+              <folding>
+                <element signature="n#!!doc;n#gecode#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -132,10 +138,16 @@
         <option value="$PROJECT_DIR$/truckstop.js" />
         <option value="$PROJECT_DIR$/autocomplete.html" />
         <option value="$PROJECT_DIR$/js/truckstop.js" />
+        <option value="$PROJECT_DIR$/js/controls.js" />
+        <option value="$PROJECT_DIR$/js/truckstops.js" />
+        <option value="$PROJECT_DIR$/js/mapmarkers.js" />
         <option value="$PROJECT_DIR$/js/autocomplete.js" />
         <option value="$PROJECT_DIR$/css/truckstops.css" />
+        <option value="$PROJECT_DIR$/js/geocoder.js" />
+        <option value="$PROJECT_DIR$/js/truckstop1.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/truckstops.js" />
+        <option value="$PROJECT_DIR$/js/mapcontrols.js" />
+        <option value="$PROJECT_DIR$/js/handlers.js" />
       </list>
     </option>
   </component>
@@ -202,6 +214,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="truck-stops-finder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="truck-stops-finder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -700,16 +726,16 @@
       <option name="number" value="Default" />
       <updated>1458092558881</updated>
       <workItem from="1458092560131" duration="417000" />
-      <workItem from="1458106438765" duration="22241000" />
+      <workItem from="1458106438765" duration="36337000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22658000" />
+    <option name="totallyTimeSpent" value="36754000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -720,7 +746,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932693" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -748,7 +774,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -763,32 +789,18 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/truckstop1.js">
+    <entry file="file://$PROJECT_DIR$/css/truckstops.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="230" column="42" selection-start-line="230" selection-start-column="42" selection-end-line="230" selection-end-column="42" />
-          <folding>
-            <element signature="n#!!doc;n#isInArray#0" expanded="false" />
-            <element signature="n#!!block;n#isInArray#0" expanded="false" />
-            <element signature="n#!!doc;n#createMarkers#0" expanded="false" />
-            <element signature="n#!!doc;n#createTruckStopMarkers#0" expanded="false" />
-            <element signature="n#!!doc;n#deleteTruckStopMarkers#0" expanded="false" />
-            <element signature="n#!!block;n#deleteTruckStopMarkers#0" expanded="false" />
-            <element signature="n#!!doc;n#createClearControl#0" expanded="false" />
-            <element signature="n#!!doc;n#initMap#0" expanded="false" />
-            <element signature="n#!!doc;n#loadTruckStops#0" expanded="false" />
-            <element signature="n#!!doc;n#loadTruckStopsFromAddress#0" expanded="false" />
-            <element signature="n#!!doc;n#loadTruckStopsFromLatLang#0" expanded="false" />
-            <element signature="n#!!doc;n#pageLoad#0" expanded="false" />
-            <element signature="n#!!block;n#pageLoad#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.39473686">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/autocomplete.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
+          <caret line="2" column="48" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -796,24 +808,60 @@
     <entry file="file://$PROJECT_DIR$/js/truckstops.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="3" />
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/truckstops.css">
+    <entry file="file://$PROJECT_DIR$/js/geocoder.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.625">
-          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding>
+            <element signature="n#!!doc;n#gecode#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/mapmarkers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+          <folding>
+            <element signature="n#!!block;n#isInArray#0" expanded="false" />
+            <element signature="n#!!block;n#createMarkers#0" expanded="false" />
+            <element signature="n#!!block;n#paginateMarkers#0" expanded="false" />
+            <element signature="n#!!block;n#loadCurrentLocationMarker#0" expanded="false" />
+            <element signature="n#!!block;n#loadTruckStopMarkers#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57539684">
-          <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+        <state vertical-scroll-proportion="-19.375">
+          <caret line="31" column="86" selection-start-line="31" selection-start-column="86" selection-end-line="31" selection-end-column="86" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/mapcontrols.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="32" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
+          <folding>
+            <element signature="n#!!block;n#createMapControls#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/handlers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32692307">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#loadMap#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
