@@ -17,6 +17,16 @@ function createMarkers(results){
                 position: place.geometry.location
             });
 
+            var content= "My location";
+            var infowindow = new google.maps.InfoWindow();
+            google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){
+                return function() {
+                    infowindow.setContent(content);
+                    infowindow.open(map,marker);
+                };
+            })(marker,content,infowindow));
+
+
             markers.push(marker);
 
         }
@@ -50,6 +60,16 @@ function loadCurrentLocationMarker(location){
         position: location,
         icon : 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
     });
+
+    var content= "My location";
+    var infowindow = new google.maps.InfoWindow();
+    google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){
+        return function() {
+            infowindow.setContent(content);
+            infowindow.open(map,marker);
+        };
+    })(marker,content,infowindow));
+
     markers.push(marker);
 }
 
