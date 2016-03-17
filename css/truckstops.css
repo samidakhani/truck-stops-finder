@@ -34,3 +34,16 @@ label{
     height: 92%;
     width:100%
 }
+
+.facility_div{
+    border:2px solid;
+    margin:2px;
+    float: left
+}
+
+.facility_image {
+    width:30px;
+    height:40px;
+    padding:2px
+
+}

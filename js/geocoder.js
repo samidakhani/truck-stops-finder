@@ -35,3 +35,21 @@ function reverseGeocode(lat,lng){
     });
 
 }
+
+
+function reverseGeocode(latlng){
+
+    var address;
+    var geocoder = new google.maps.Geocoder();
+
+    geocoder.geocode({'location': latlng}, function(results, status) {
+        if (status === google.maps.GeocoderStatus.OK) {
+            address = results[0].formatted_address;
+            alert(address);
+
+        }else {
+            alert("Reverse Geocode was not successful for the following reason: " + status);
+        }
+    });
+
+}
