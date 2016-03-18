@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14ca739d-5b7b-4dd7-974f-6fc9785153e9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/atm.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/gas_station.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/parking.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/restaurant.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/store.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/full_rating.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/half_rating.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/utils.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/truckstops.css" afterPath="$PROJECT_DIR$/css/truckstops.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/geocoder.js" afterPath="$PROJECT_DIR$/js/geocoder.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/mapmarkers.js" afterPath="$PROJECT_DIR$/js/mapmarkers.js" />
     </list>
     <ignored path="truck-stops-finder.iws" />
@@ -35,28 +31,54 @@
       <file leaf-file-name="mapmarkers.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/mapmarkers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3653846">
-              <caret line="125" column="21" selection-start-line="125" selection-start-column="21" selection-end-line="125" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.20951156">
+              <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
               <folding>
                 <element signature="n#!!block;n#isInArray#0" expanded="false" />
-                <element signature="n#!!block;n#createMarkers#0" expanded="false" />
-                <element signature="n#!!block;n#paginateMarkers#0" expanded="false" />
                 <element signature="n#!!block;n#deleteTruckStopMarkers#0" expanded="false" />
                 <element signature="n#!!block;n#loadCurrentLocationMarker#0" expanded="false" />
                 <element signature="n#!!block;n#loadTruckStopMarkers#0" expanded="false" />
-                <element signature="n#!!block;n#closeInfoWindow#0" expanded="false" />
                 <element signature="n#!!block;n#getCurrLocInfoWindow#0" expanded="false" />
-                <marker date="1458201786000" expanded="true" signature="3004:3032" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="5233:5257" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="5371:5395" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="5509:5533" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="5599:5623" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="5737:5761" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="5827:5851" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="5965:5989" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="6055:6079" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="6145:6169" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="6283:6307" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="6373:6397" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="6463:6487" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="6601:6625" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="6691:6715" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="6781:6805" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="6871:6895" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="7009:7033" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="7099:7123" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="7189:7213" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="7279:7303" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="7417:7441" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="7507:7531" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="7597:7621" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="7687:7711" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="7777:7801" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="7915:7939" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="8005:8029" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="8095:8119" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="8185:8209" placeholder="..." />
+                <marker date="1458259782000" expanded="true" signature="8275:8299" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="truckstops.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/truckstops.css">
+      <file leaf-file-name="utils.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/utils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.0">
-              <caret line="40" column="15" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -103,6 +125,8 @@
         <option value="$PROJECT_DIR$/js/handlers.js" />
         <option value="$PROJECT_DIR$/js/geocoder.js" />
         <option value="$PROJECT_DIR$/css/truckstops.css" />
+        <option value="$PROJECT_DIR$/js/infowindow.js" />
+        <option value="$PROJECT_DIR$/js/utils.js" />
         <option value="$PROJECT_DIR$/js/mapmarkers.js" />
       </list>
     </option>
@@ -169,21 +193,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="truck-stops-finder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="truck-stops-finder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -668,12 +678,12 @@
       <option name="number" value="Default" />
       <updated>1458092558881</updated>
       <workItem from="1458092560131" duration="417000" />
-      <workItem from="1458106438765" duration="41430000" />
+      <workItem from="1458106438765" duration="54117000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41847000" />
+    <option name="totallyTimeSpent" value="54534000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -753,14 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5555556">
-          <caret line="29" column="100" selection-start-line="29" selection-start-column="100" selection-end-line="29" selection-end-column="100" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/geocoder.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -814,20 +816,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/images/half_rating.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/full_rating.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5569782">
+          <caret line="29" column="100" selection-start-line="29" selection-start-column="100" selection-end-line="29" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/mapmarkers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3653846">
-          <caret line="125" column="21" selection-start-line="125" selection-start-column="21" selection-end-line="125" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.20951156">
+          <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
           <folding>
             <element signature="n#!!block;n#isInArray#0" expanded="false" />
-            <element signature="n#!!block;n#createMarkers#0" expanded="false" />
-            <element signature="n#!!block;n#paginateMarkers#0" expanded="false" />
             <element signature="n#!!block;n#deleteTruckStopMarkers#0" expanded="false" />
             <element signature="n#!!block;n#loadCurrentLocationMarker#0" expanded="false" />
             <element signature="n#!!block;n#loadTruckStopMarkers#0" expanded="false" />
-            <element signature="n#!!block;n#closeInfoWindow#0" expanded="false" />
             <element signature="n#!!block;n#getCurrLocInfoWindow#0" expanded="false" />
-            <marker date="1458201786000" expanded="true" signature="3004:3032" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="5233:5257" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="5371:5395" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="5509:5533" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="5599:5623" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="5737:5761" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="5827:5851" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="5965:5989" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="6055:6079" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="6145:6169" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="6283:6307" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="6373:6397" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="6463:6487" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="6601:6625" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="6691:6715" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="6781:6805" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="6871:6895" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="7009:7033" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="7099:7123" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="7189:7213" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="7279:7303" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="7417:7441" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="7507:7531" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="7597:7621" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="7687:7711" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="7777:7801" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="7915:7939" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="8005:8029" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="8095:8119" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="8185:8209" placeholder="..." />
+            <marker date="1458259782000" expanded="true" signature="8275:8299" placeholder="..." />
           </folding>
         </state>
       </provider>
