@@ -2,7 +2,6 @@
  * Created by sdakhani on 3/16/16.
  */
 
-
 function gecode(address){
 
     var location   = new google.maps.LatLng();
