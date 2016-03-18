@@ -80,10 +80,20 @@ function getPlaceTypes(placeTypes){
 }
 
 
-function getGasFeed(place){
+function getGasFeedData(place){
 
     var lat = place.geometry.location.lat();
     var lng = place.geometry.location.lng();
 
-   // getApiData(lat,lng);
+    var data = getApiData(lat,lng);
+
+    var json = JSON.parse(data);
+
+    var map = new Object();
+    map["station"] = json.station;
+    map["diesel_price"] = json.diesel_price;
+    map["last_updated"] = json.last_updated;
+
+    return map;
+
 }

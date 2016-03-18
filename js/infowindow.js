@@ -32,8 +32,7 @@ function loadPlaceDeatils(place, status) {
         var postalCode = addressComponent[5].types;
 
 
-        getGasFeed(place);
-
+        var feedMap=getGasFeedData(place);
 
         var content = "<div>";
         content += "<h4>" + name + "</h4>";
@@ -41,9 +40,10 @@ function loadPlaceDeatils(place, status) {
         content += "<span>" + city + ", " + state +"</span>"+"<br />";
         content += "<span>" + phone + "</span>"+"<br />";
         if(rating)
-            content +=getRating(rating);
+            content +=getRating(rating) + "<br />";
 
-
+        content +=feedMap["station"] + "<br/>";
+        content += feedMap["diesel_price"] + " " + feedMap["last_updated"];
         content +=getPlaceTypes(placeTypes);
         content += "</div>";
 
