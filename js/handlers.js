@@ -1,11 +1,12 @@
-var latField;
-var longField;
-var addrField;
 
 function currentLocationBtnClick(){
 
     if(markers.length != 0){
         deleteTruckStopMarkers();
+
+        var latField = document.getElementById("latTxt");
+        var longField = document.getElementById("lngTxt");
+        var addrField =  document.getElementById("addrTxt");
 
         latField.value = '';
         longField.value = '';
@@ -33,6 +34,10 @@ function clearMarkersBtnClick(){
 
     clearMarkersBtn.style.display = 'none';
 
+    var latField = document.getElementById("latTxt");
+    var longField = document.getElementById("lngTxt");
+    var addrField =  document.getElementById("addrTxt");
+
     latField.value = '';
     longField.value = '';
     addrField.value = '';
@@ -41,9 +46,9 @@ function clearMarkersBtnClick(){
 
 function loadMapBtnClick(){
 
-    latField = document.getElementById("latTxt");
-    longField = document.getElementById("lngTxt");
-    addrField =  document.getElementById("addrTxt");
+    var latField = document.getElementById("latTxt");
+    var longField = document.getElementById("lngTxt");
+    var addrField =  document.getElementById("addrTxt");
 
     if(markers.length != 0){
         deleteTruckStopMarkers();

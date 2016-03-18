@@ -190,7 +190,6 @@ function loadPlaceDeatils(place, status) {
     }
 }
 
-
 function getRating(rating){
 
     var content="";
@@ -240,6 +239,7 @@ function getRating(rating){
 
     return content;
 }
+
 
 
 

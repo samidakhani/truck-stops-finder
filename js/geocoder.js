@@ -45,7 +45,6 @@ function reverseGeocode(latlng){
     geocoder.geocode({'location': latlng}, function(results, status) {
         if (status === google.maps.GeocoderStatus.OK) {
             address = results[0].formatted_address;
-            alert(address);
 
         }else {
             alert("Reverse Geocode was not successful for the following reason: " + status);
